@@ -60,6 +60,10 @@ def test_es_tokenizer_handles_cnts(es_tokenizer, text, length):
         ("perro", False),
         (",", False),
         ("1/2", True),
+        ( "1.º", True),
+        ("primeras", True), 
+        ("10ª", True),
+        ("ª", False),
     ],
 )
 def test_lex_attrs_like_number(es_tokenizer, text, match):
