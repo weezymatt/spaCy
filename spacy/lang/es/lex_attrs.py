@@ -47,8 +47,8 @@ _num_words = [
 
 
 _ordinal_words = [
-    "primer", # apocopated
-    "tercer", # apocopated
+    "primer",  # apocopated
+    "tercer",  # apocopated
     "primero",
     "segundo",
     "tercero",
@@ -83,10 +83,10 @@ _ordinal_words = [
 ]
 
 
-_ordinal_fem = [ord[:-1] + 'a' for ord in _ordinal_words[2:]]
+_ordinal_fem = [ord[:-1] + "a" for ord in _ordinal_words[2:]]
 
 
-_ordinal_pl = [ord + 's' for ord in _ordinal_words[2:] + _ordinal_fem]
+_ordinal_pl = [ord + "s" for ord in _ordinal_words[2:] + _ordinal_fem]
 
 
 _ordinal_abbr = [
@@ -119,7 +119,7 @@ def like_num(text):
         if text[:-1].endswith("."):
             if text[:-2].isdigit():
                 return True
-        # Handles cases like "5o", 10º", "10a" 
+        # Handles cases like "5o", "10º", "10a"
         if text[:-1].isdigit():
             return True
 
